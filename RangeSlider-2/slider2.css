@@ -1,0 +1,32 @@
+.slider {
+    -webkit-appearance: none;
+    width: 400px;
+    height: 10px;
+    border-radius: 3px;
+    background: #d3d3d3;
+    outline: none;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+
+  #slider{
+    background-color: yellow;
+    width: 400px;
+    height: auto;
+  }
+  
+  body{
+    padding: 0 ;
+    width: 450px;
+    margin: 30% ;
+    position: relative;
+
+  }
