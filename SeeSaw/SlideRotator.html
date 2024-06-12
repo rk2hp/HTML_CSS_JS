@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .seesaw-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+
+        .seesaw {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .slider-side {
+            width: 200px;
+            height: 100px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .slider-side input[type="range"] {
+            width: 80%;
+        }
+
+        .red-dot {
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .fulcrum {
+            width: 20px;
+            height: 20px;
+            background-color: #333;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="seesaw-container">
+        <div class="seesaw">
+            <div class="slider-side">
+                <input type="range" min="0" max="100" value="0" id="sliderInput">
+                <div class="red-dot"></div>
+            </div>
+            <div class="fulcrum"></div>
+        </div>
+    </div>
+    <script>
+        const sliderInput = document.getElementById('sliderInput');
+        const seesaw = document.querySelector('.seesaw');
+
+        sliderInput.addEventListener('input', updateSeesaw);
+
+        function updateSeesaw() {
+            const sliderValue = sliderInput.value;
+            animateSeesaw(sliderValue);
+        }
+
+        function animateSeesaw(sliderValue) {
+            const maxRotation = 90; // Maximum rotation angle in degrees
+            const rotationAngle = (sliderValue / 100) * maxRotation;
+
+            seesaw.style.transform = `rotate(${rotationAngle}deg)`;
+        }
+      
+    </script>
+</body>
+
+</html>

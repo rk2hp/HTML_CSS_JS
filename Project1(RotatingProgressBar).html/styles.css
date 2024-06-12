@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rotating-box {
+    position: relative;
+    width: 400px;
+    height: 70px;
+    background-color: grey;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    transition: transform 0.1s ease-in-out;
+}
+
+.progress-container {
+    position: relative;
+    width: 80%;
+    height: 15px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    /* margin-bottom: 10px; */
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #007bff;
+    transition: width 0.1s ease-in-out;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.ball {
+    position: absolute;
+    top: 50%;
+    left: 100%; /* Position it at the end of the progress bar */
+    transform: translate(-50%, -50%); /* Center it vertically */
+    width: 15px; /* Adjust the size */
+    height: 15px; /* Adjust the size */
+    background-color: red; /* Change the color to red */
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+

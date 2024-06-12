@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .seesaw-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+
+        .seesaw {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .input-side {
+            width: 200px;
+            height: 100px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input-side input {
+            width: 80%;
+            padding: 5px;
+        }
+
+        .fulcrum {
+            width: 20px;
+            height: 20px;
+            background-color: #333;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="seesaw-container">
+        <div class="seesaw">
+            <div class="input-side">
+                <input type="text" id="inputField" placeholder="Enter text here">
+            </div>
+            <div class="fulcrum"></div>
+        </div>
+    </div>
+    <script>
+        const inputField = document.getElementById('inputField');
+        const seesaw = document.querySelector('.seesaw');
+
+        inputField.addEventListener('input', updateSeesaw);
+
+        function updateSeesaw() {
+            const inputValue = inputField.value;
+            animateSeesaw(inputValue.length);
+        }
+
+        function animateSeesaw(inputLength) {
+            const maxRotation = 20; // Maximum rotation angle in degrees
+            const maxInputLength = 20; // Maximum input length before reaching maximum rotation
+            const rotationAngle = (inputLength / maxInputLength) * maxRotation;
+
+            seesaw.style.transform = `rotate(${rotationAngle}deg)`;
+        }
+    </script>
+</body>
+
+</html>

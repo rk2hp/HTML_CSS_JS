@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable Div Element</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif, sans-serif ;
+
+        }
+        body{
+            background-color: blue;
+        }
+        .wrapper{
+            top: 50%;
+            left: 50%;
+            width: 350px;
+           
+            position: absolute;
+            border-radius: 10px;
+            background-color: white;
+            transform: translate(-50%, -50%) scale(1.4);
+        }
+
+        .wrapper header{
+            font-size: 23px;
+            font-weight: 500;
+            color: blue;
+            border-bottom: 1px solid #bfbfbf;
+            padding: 17px 30px;
+        }
+
+        .wrapper .content{
+            margin: 30px 30px 30px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+        .content .icon{
+            height: 95px;
+            width: 95px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border:5px solid #6f36ff ;
+        }
+         
+        .content .icon .i{
+            color: #6f36ff;
+            font-size: 60px;
+        }
+
+        .content .title{
+            font-size: 29px;
+            font-weight: 500;
+            margin: 15px 0;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>Draggable Div </header>
+        <div class="content">
+            <div class="icon"><i class="bx bx-move">i</i></div>
+            <div class="title">Draggable div</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus harum corrupti optio laboriosam!</p>
+
+        </div>
+    </div>
+</body>
+</html>
