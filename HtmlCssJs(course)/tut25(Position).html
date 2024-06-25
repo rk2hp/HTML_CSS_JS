@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        .box{
+            display: inline-block;
+            border: 2px solid red;
+            width: 158px;
+            height: 158px;
+            margin: 5px;
+        }
+        .container{
+            display: flex;
+            background-color: aquamarine;
+            height: 1500px;
+        }
+        #box2{
+            position: sticky;
+            top: -40px;
+            /* right: 3px; */
+        }
+        #box3{
+            position: fixed;
+            bottom: 3px;
+            right: 3px;
+        }
+        #box4{
+            position: relative;
+            top: 20px;
+            left: 80px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+</html>

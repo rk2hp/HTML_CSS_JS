@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            border: 2px solid black;
+            
+        }
+        .box{
+            margin: 10px;
+           text-align: center;   
+            background-color: tomato;
+            display: none;
+        }
+        @media  (max-width:390px) {
+           #box1{
+            display: block;
+           } 
+        }
+        @media (min-width:390px) and (max-width:768px) {
+           #box2{
+            display: block;
+           } 
+        }
+        @media (min-width:768px) and (max-width:1024px) {
+           #box3{
+            display: block;
+           } 
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box" id="box1">ME ek iphone hu</div>
+        <div class="box" id="box2">Me ek Tablet hu</div>
+        <div class="box" id="box3">ME ek computer hu</div>
+        <div class="box" id="box4">Me ek wide Screen computer hu</div>
+    </div>
+
+</body>
+
+</html>

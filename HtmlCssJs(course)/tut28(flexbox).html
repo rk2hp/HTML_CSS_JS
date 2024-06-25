@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        overflow: auto;
+    }
+    .container{
+        width: 100%;
+        height: auto;
+        border: 2px solid black;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .box{
+        border: 2px solid green;
+        margin: 3px;
+        background-color:tomato;
+        height: 80px;
+        width:80px ;
+    }
+    #box3{
+        /* flex-grow: 3; */
+    }
+    #box1{
+        /*Flex properties for a flex item  */
+        /* order: 2; */
+        /* flex-grow:2 ; */
+        /* When flex direction is set to row flex-basis will control width */
+        /* When flex direction is set to column flex-basis will control height */
+        flex-basis: 150px;
+    }
+    .container2{
+        
+        margin-top:10px ;
+        width: 100%;
+        height: auto;
+        border: 2px solid black;
+        display: flex;
+        justify-content: space-around;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+    .boxx{
+        border: 2px solid green;
+        margin: 3px;
+        background-color:tomato;
+        height: 80px;
+        width:80px ;
+    }
+    .container3{
+        
+        margin-top:10px ;
+        width: 100%;
+        height: auto;
+        border: 2px solid black;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .boyx{
+        border: 2px solid green;
+        margin: 3px;
+        background-color:tomato;
+        height: 80px;
+        width:80px ;
+    }
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="box" id="box1">First</div>
+        <div class="box" id="box2">Second</div>
+        <div class="box" id="box3">Third</div>
+        <div class="box" id="box4">fourth</div>
+        <div class="box" id="box5">Fifth</div>
+        <div class="box" id="box6">Sixth</div>
+    </div>
+    <div class="container2">
+        <div class="boxx" id="box7">Seven</div>
+        <div class="boxx" id="box8">Eight</div>
+        <div class="boxx" id="box9">Nine</div>
+        <div class="boxx" id="box10">Ten</div>
+        <div class="boxx" id="box11">Eleven</div>
+        <div class="boxx" id="box12">Twelve</div>
+    </div>
+    <div class="container3">
+        <div class="boyx" id="box13">Thirteen</div>
+        <div class="boyx" id="box14">Fourteen</div>
+        <div class="boyx" id="box15">Fifteen</div>
+        <div class="boyx" id="box16">Sixteen</div>
+        <div class="boyx" id="box17">Seventeen</div>
+        <div class="boyx" id="box18">Eighteen</div>
+    </div>
+</body>
+</html>

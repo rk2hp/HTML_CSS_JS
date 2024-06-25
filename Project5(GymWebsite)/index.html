@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Document</title>
+</head>
+<style>
+    * {
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .mainhead{
+        position: relative;
+        border: 6px solid black;
+        height: 60px;
+        background-color: blue;
+        overflow: auto;
+        
+    }
+
+    body {
+        background: url(images\ gym/bgi3gym.avif);
+        /* background-color: pink; */
+        background-repeat: no-repeat;
+        background-size: 100%;
+        /* height: 100%; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        height: 55px;
+        width: 100%;
+        /* border: 2px solid white; */
+        display: flex;
+        position: absolute;
+        background-color: rgb(250, 250, 250, 0.2);
+    }
+
+    .logoBox {
+        height: 100%;
+        width: auto;
+        display: flex;
+        /* border: 2px solid white; */
+    }
+
+    .logo {
+        filter: invert(100%);
+        height: 55px;
+        width: 65px;
+    }
+
+    .Sname {
+        color: white;
+        /* border: 2px solid white; */
+        display: inline-block;
+        font-weight: bold;
+        font-size: large;
+        align-self: center;
+    }
+
+    .navBox {
+        /* border: 2px solid red; */
+        display: flex;
+        margin: auto;
+        width: auto;
+        height: 100%;
+    }
+
+    .navBox ul {
+        width: 100%;
+        height: 100%;
+        /* border: 2px solid green; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navBox ul li {
+        margin-inline: 16px;
+        /* border: 2px solid green; */
+
+    }
+
+    .navBox ul li a {
+        color: white;
+        font-weight: bold;
+        position: relative;
+        padding-inline: 10px;
+
+    }
+
+    .navBox ul li a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 2px;
+        bottom: -10px;
+        width: 0%;
+        pointer-events: none;
+        background-color: white;
+        transition: all 0.3s;
+    }
+
+    .navBox ul li a:hover::before {
+        width: 100%;
+    }
+
+    .searchContainer {
+        /* background-color: blue; */
+        width: 250px;
+        align-self: center;
+        /* align-content: flex-end; */
+    }
+
+    .searchbox {
+        float: right;
+        margin-right: 10px;
+        background-color: white;
+        display: flex;
+        background-color: none;
+        border-radius: 20px;
+        padding-inline: 5px;
+        padding-block: 2px;
+        opacity: 0.4;
+    }
+
+    .search-text {
+        background-color: white;
+        opacity: 0.4;
+        width: 0px;
+        border-radius: 5px;
+        font-size: 15px;
+        border: none;
+        outline: none;
+        transition: all 0.4s;
+    }
+
+    .search-btn {
+        /* background-color: blueviolet; */
+        color: #e84118;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: none;
+    }
+
+    .searchbox:hover>.search-text {
+        width: 200px;
+    }
+
+    .section1 {
+        border: 2px solid red;
+        width: 100%;
+        position: relative;
+        display: flex;
+        /* vertical-align: baseline; */
+        height: auto;
+        /* overflow: auto; */
+
+    }
+
+    .formcontainer {
+        /* border: 24px solid red; */
+        background-color: rgb(124, 117, 117, 0.6);
+        border-radius: 17px;
+        position: relative;
+       
+        height: 273px;
+        width: 286px;
+        
+        display: flex;
+        float: left;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .formheading {
+        text-align: center;
+        margin: 20px 0px;
+        width: auto;
+        padding-top: 12px;
+    }
+
+    .formGroup {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .input {
+        font-family: serif;
+        border-radius: 6px;
+        background-color: #a5a1a1;
+        border-style: none;
+        height: 20px;
+        padding: 5px;
+
+    }
+
+    .input::placeholder {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+    }
+
+    .btn {
+        height: 23px;
+        width: auto;
+        width: 60px;
+        margin: 10px;
+        font-weight: bold;
+        border-radius: 5px;
+        border-style: none;
+    }
+
+    .btn:hover {
+        background-color: rgb(10, 10, 10);
+        color: white;
+    }
+
+    .formbody {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+
+
+    .hamburger {
+        display: none;
+
+    }
+
+    .HamSearch {
+        display: flex;
+    }
+
+
+
+
+    @media (max-width:873px) {
+        .navBox {
+            display: none;
+        }
+
+        nav {
+            height: 55px;
+            width: 100%;
+            /* border: 2px solid white; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: rgb(250, 250, 250, 0.2);
+        }
+
+        .hamburger {
+            display: block;
+            cursor: pointer;
+            padding: 10px 0px;
+            /* align-items: flex-end; */
+
+        }
+
+        .hamburger .line {
+            width: 30px;
+            height: 3px;
+            background: white;
+            margin: 6px 0;
+        }
+    }
+
+    @media (max-width:480px) {
+        .searchContainer {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+
+
+    <header class="mainhead">
+
+        <nav>
+            <div class="logoBox">
+                <img src="images gym/logo4.png" alt="" class="logo">
+                <span class="Sname">Energy Fitness.</span>
+            </div>
+
+            <div class="navBox">
+                <ul>
+                    <li><a href="Home">Home</a></li>
+                    <li><a href="About">About</a></li>
+                    <li><a href="Exercises">Exercises</a></li>
+                    <li><a href="Contact Us">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="HamSearch">
+                <div class="searchContainer">
+                    <div class="searchbox">
+                        <input type="text" name="" class="search-text" placeholder="Search">
+                        <a href="#" class="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section1">
+
+        <div class="formcontainer">
+            <h2 class="formheading">Join The Best Gym Of Mathura</h2>
+            <form action="operation.php" class="formbody">
+                <div class="formGroup">
+                    <input type="text" placeholder="Name" class="input">
+                </div>
+                <div class="formGroup">
+                    <input type="text" placeholder="Age" class="input">
+                </div>
+                <div class="formGroup">
+                    <input type="text" placeholder="Phone No" class="input">
+                </div>
+                <button class="btn">Submit</button>
+            </form>
+        </div>
+        <!-- <div class="videoBox">
+            <video class="video" controls autoplay muted src="GymVideo.mp4"></video>
+        </div> -->
+    </section>
+    <section class="section2">
+        <div class="para">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis quos aspernatur consequuntur, quasi non
+                libero incidunt cumque atque vel eos unde tempore voluptatem nobis, fuga deleniti, mollitia ipsum hic
+                nam.
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>

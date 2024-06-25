@@ -13,7 +13,7 @@
         }
 
         .container {
-            width: 900px;
+            width: 100%;
             border: 3px solid red;
             margin: auto;
         }
@@ -25,8 +25,11 @@
             background-color: rgb(228, 206, 206);
         }
 
-        p {
+        p ,h3 {
             font-family: "mocondo", cursive;
+            /* text-align: center; */
+            /* text-align: justify; */
+            text-align: left;
         }
 
         #fruit{
@@ -37,11 +40,19 @@
         #computer{
             float: right;
             width: 48%;
+           
         }
         #stationary{
             /* float: left; */
-            width: 100 %;
+            
+            width: 100%;
             clear:left;
+           
+        
+        }
+        h1{
+            margin: auto;
+            width: 400px;
         }
 
     </style>
@@ -49,6 +60,7 @@
 
 <body>
     <div class="container">
+        <h1>Welcome To My Store</h1>
         <div id="fruit" class="item">
             <h3>Fruits</h3>
             <p id="fruitpara" class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, eum.
@@ -58,6 +70,12 @@
             <h3>Computer</h3>
             <p id="computerpara" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim id
                 temporibus animi minima. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut in repudiandae rem. Recusandae ab perspiciatis perferendis ipsa, labore tempore aliquid.</p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>stationary</h3>
+            <p id="stationarypara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius accusamus
+                neque doloribus provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam ipsa nihil explicabo? Aliquid perferendis cum non ipsa voluptas, expedita doloribus!
+            </p>
         </div>
         <div id="stationary" class="item">
             <h3>stationary</h3>
